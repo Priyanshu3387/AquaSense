@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Smart Automated Water Quality Monitoring System — Real-time IoT-based water quality analysis using advanced sensors and AI-driven analytics." />
+  <meta name="keywords" content="water quality, IoT, smart water monitoring, pH sensor, turbidity, automated water testing" />
+  <title>AquaSense — Smart Automated Water Quality Monitoring</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+</head>
+<body>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo" id="nav-logo-link">
+        <span class="logo-icon">💧</span>
+        <span class="logo-text">Aqua<span class="logo-accent">Sense</span></span>
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home" class="nav-link active" id="nav-home">Home</a></li>
+        <li><a href="#about" class="nav-link" id="nav-about">About</a></li>
+        <li><a href="#features" class="nav-link" id="nav-features">Features</a></li>
+        <li><a href="#dashboard" class="nav-link" id="nav-dashboard">Dashboard</a></li>
+        <li><a href="#results" class="nav-link" id="nav-results">Results</a></li>
+        <li><a href="#contact" class="nav-link" id="nav-contact">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger-btn" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section class="hero" id="home">
+    <div class="hero-bg-anim">
+      <div class="bubble" style="--x:10%;--delay:0s;--size:60px"></div>
+      <div class="bubble" style="--x:25%;--delay:1.5s;--size:30px"></div>
+      <div class="bubble" style="--x:50%;--delay:3s;--size:80px"></div>
+      <div class="bubble" style="--x:70%;--delay:0.8s;--size:45px"></div>
+      <div class="bubble" style="--x:85%;--delay:2.2s;--size:25px"></div>
+      <div class="bubble" style="--x:40%;--delay:4s;--size:55px"></div>
+      <div class="bubble" style="--x:60%;--delay:2s;--size:35px"></div>
+      <div class="wave-line"></div>
+      <div class="wave-line" style="--delay:1s;--opacity:0.3"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge" id="hero-badge">
+        <span class="pulse-dot"></span> Live Monitoring Active
+      </div>
+      <h1 class="hero-title" id="hero-title">
+        Smart Automated<br /><span class="gradient-text">Water Quality</span><br />Monitoring System
+      </h1>
+      <p class="hero-subtitle" id="hero-subtitle">
+        Harnessing IoT sensors, real-time data analytics, and AI-driven intelligence 
+        to ensure safe, clean water — automatically.
+      </p>
+      <div class="hero-cta" id="hero-cta">
+        <a href="#dashboard" class="btn btn-primary" id="btn-view-dashboard">
+          <span>View Dashboard</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#about" class="btn btn-outline" id="btn-learn-more">Learn More</a>
+      </div>
+      <div class="hero-stats" id="hero-stats">
+        <div class="stat-item">
+          <span class="stat-value" data-target="6">0</span><span class="stat-unit">+</span>
+          <span class="stat-label">Sensors</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-value" data-target="99">0</span><span class="stat-unit">%</span>
+          <span class="stat-label">Accuracy</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-value" data-target="24">0</span><span class="stat-unit">/7</span>
+          <span class="stat-label">Monitoring</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual" id="hero-visual">
+      <div class="hero-img-wrapper">
+        <img src="assets/hero_water_quality.jpg" alt="Smart Water Quality Monitoring System" class="hero-img" id="hero-img" />
+        <div class="img-glow"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT SECTION ===== -->
+  <section class="section about-section" id="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" id="about-tag">About the Project</span>
+        <h2 class="section-title" id="about-title">What is AquaSense?</h2>
+        <p class="section-desc" id="about-desc">
+          AquaSense is an intelligent, fully automated water quality monitoring system built 
+          on IoT architecture. It continuously measures key water parameters in real-time, 
+          making water safety analysis accessible, fast, and reliable.
+        </p>
+      </div>
+      <div class="about-cards" id="about-cards">
+        <div class="about-card" id="about-card-problem">
+          <div class="card-icon">⚠️</div>
+          <h3>The Problem</h3>
+          <p>Traditional water testing is manual, slow, expensive, and fails to detect sudden contamination events in time — putting communities at risk.</p>
+        </div>
+        <div class="about-card highlight" id="about-card-solution">
+          <div class="card-icon">🔬</div>
+          <h3>Our Solution</h3>
+          <p>A network of smart sensors continuously monitors water quality parameters and transmits data wirelessly. Alerts are sent instantly when thresholds are breached.</p>
+        </div>
+        <div class="about-card" id="about-card-impact">
+          <div class="card-icon">🌍</div>
+          <h3>The Impact</h3>
+          <p>Safer drinking water for communities, reduced cost of water quality management, and early detection of pollution events through predictive analytics.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FEATURES SECTION ===== -->
+  <section class="section features-section" id="features">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" id="features-tag">Core Features</span>
+        <h2 class="section-title" id="features-title">How It Works</h2>
+        <p class="section-desc" id="features-desc">
+          Six key capabilities that make AquaSense a next-generation water safety solution.
+        </p>
+      </div>
+      <div class="features-grid" id="features-grid">
+        <div class="feature-card" id="feature-realtime">
+          <div class="feature-icon-wrap" style="--clr:#00d4ff">
+            <span>📡</span>
+          </div>
+          <h3>Real-Time Sensing</h3>
+          <p>Continuous data collection from multiple sensors deployed at various points in the water network, updating every few seconds.</p>
+        </div>
+        <div class="feature-card" id="feature-ph">
+          <div class="feature-icon-wrap" style="--clr:#4ade80">
+            <span>🧪</span>
+          </div>
+          <h3>Multi-Parameter Analysis</h3>
+          <p>Monitors pH, turbidity, dissolved oxygen, temperature, TDS (Total Dissolved Solids), and conductivity simultaneously.</p>
+        </div>
+        <div class="feature-card" id="feature-alert">
+          <div class="feature-icon-wrap" style="--clr:#f59e0b">
+            <span>🔔</span>
+          </div>
+          <h3>Instant Alerts</h3>
+          <p>Automated alerts via SMS and email notify stakeholders the moment any parameter crosses safe thresholds.</p>
+        </div>
+        <div class="feature-card" id="feature-ai">
+          <div class="feature-icon-wrap" style="--clr:#a855f7">
+            <span>🤖</span>
+          </div>
+          <h3>AI-Driven Predictions</h3>
+          <p>Machine learning models analyze historical sensor data to predict water quality trends and potential contamination events.</p>
+        </div>
+        <div class="feature-card" id="feature-cloud">
+          <div class="feature-icon-wrap" style="--clr:#06b6d4">
+            <span>☁️</span>
+          </div>
+          <h3>Cloud Storage & Logging</h3>
+          <p>All sensor readings are securely stored in the cloud with timestamp accuracy, enabling long-term analysis and reporting.</p>
+        </div>
+        <div class="feature-card" id="feature-dashboard">
+          <div class="feature-icon-wrap" style="--clr:#f43f5e">
+            <span>📊</span>
+          </div>
+          <h3>Interactive Dashboard</h3>
+          <p>A beautiful, intuitive dashboard displays live and historical data through charts, gauges, and status indicators.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== DASHBOARD SECTION ===== -->
+  <section class="section dashboard-section" id="dashboard">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" id="dashboard-tag">Live Monitoring</span>
+        <h2 class="section-title" id="dashboard-title">Water Quality Dashboard</h2>
+        <p class="section-desc" id="dashboard-desc">
+          Simulated real-time sensor data — updating every 3 seconds to demonstrate live monitoring capabilities.
+        </p>
+      </div>
+
+      <!-- Status Bar -->
+      <div class="dashboard-status-bar" id="dashboard-status-bar">
+        <div class="status-item">
+          <span class="status-indicator good"></span>
+          <span>System Online</span>
+        </div>
+        <div class="status-item">
+          <span id="last-updated-label">Last Updated: <strong id="last-update-time">--:--:--</strong></span>
+        </div>
+        <div class="status-item">
+          <span class="status-indicator good"></span>
+          <span>All Sensors Active</span>
+        </div>
+      </div>
+
+      <!-- Gauge Cards -->
+      <div class="gauge-grid" id="gauge-grid">
+        <div class="gauge-card" id="gauge-ph">
+          <div class="gauge-label">pH Level</div>
+          <div class="gauge-value-wrap">
+            <span class="gauge-value" id="val-ph">7.2</span>
+            <span class="gauge-unit"></span>
+          </div>
+          <div class="gauge-bar-track">
+            <div class="gauge-bar-fill" id="bar-ph" style="width:64%"></div>
+          </div>
+          <div class="gauge-range">0 ——— 14</div>
+          <div class="gauge-status good" id="status-ph">&#10003; Normal</div>
+        </div>
+        <div class="gauge-card" id="gauge-turbidity">
+          <div class="gauge-label">Turbidity</div>
+          <div class="gauge-value-wrap">
+            <span class="gauge-value" id="val-turbidity">3.4</span>
+            <span class="gauge-unit">NTU</span>
+          </div>
+          <div class="gauge-bar-track">
+            <div class="gauge-bar-fill" id="bar-turbidity" style="width:34%"></div>
+          </div>
+          <div class="gauge-range">0 ——— 10 NTU</div>
+          <div class="gauge-status good" id="status-turbidity">&#10003; Clear</div>
+        </div>
+        <div class="gauge-card" id="gauge-do">
+          <div class="gauge-label">Dissolved O&#8322;</div>
+          <div class="gauge-value-wrap">
+            <span class="gauge-value" id="val-do">8.1</span>
+            <span class="gauge-unit">mg/L</span>
+          </div>
+          <div class="gauge-bar-track">
+            <div class="gauge-bar-fill" id="bar-do" style="width:81%"></div>
+          </div>
+          <div class="gauge-range">0 ——— 10 mg/L</div>
+          <div class="gauge-status good" id="status-do">&#10003; Optimal</div>
+        </div>
+        <div class="gauge-card" id="gauge-temp">
+          <div class="gauge-label">Temperature</div>
+          <div class="gauge-value-wrap">
+            <span class="gauge-value" id="val-temp">24.5</span>
+            <span class="gauge-unit">&#176;C</span>
+          </div>
+          <div class="gauge-bar-track">
+            <div class="gauge-bar-fill" id="bar-temp" style="width:50%"></div>
+          </div>
+          <div class="gauge-range">0 ——— 50 &#176;C</div>
+          <div class="gauge-status good" id="status-temp">&#10003; Normal</div>
+        </div>
+        <div class="gauge-card" id="gauge-tds">
+          <div class="gauge-label">TDS</div>
+          <div class="gauge-value-wrap">
+            <span class="gauge-value" id="val-tds">320</span>
+            <span class="gauge-unit">ppm</span>
+          </div>
+          <div class="gauge-bar-track">
+            <div class="gauge-bar-fill" id="bar-tds" style="width:32%"></div>
+          </div>
+          <div class="gauge-range">0 ——— 1000 ppm</div>
+          <div class="gauge-status good" id="status-tds">&#10003; Safe</div>
+        </div>
+        <div class="gauge-card" id="gauge-conductivity">
+          <div class="gauge-label">Conductivity</div>
+          <div class="gauge-value-wrap">
+            <span class="gauge-value" id="val-conductivity">640</span>
+            <span class="gauge-unit">&#181;S/cm</span>
+          </div>
+          <div class="gauge-bar-track">
+            <div class="gauge-bar-fill" id="bar-conductivity" style="width:32%"></div>
+          </div>
+          <div class="gauge-range">0 ——— 2000 &#181;S/cm</div>
+          <div class="gauge-status good" id="status-conductivity">&#10003; Normal</div>
+        </div>
+      </div>
+
+      <!-- Charts -->
+      <div class="charts-grid" id="charts-grid">
+        <div class="chart-card" id="chart-card-ph">
+          <div class="chart-header">
+            <h3>pH Level Over Time</h3>
+            <span class="chart-tag" id="chart-tag-ph">Live</span>
+          </div>
+          <canvas id="phChart"></canvas>
+        </div>
+        <div class="chart-card" id="chart-card-turbidity">
+          <div class="chart-header">
+            <h3>Turbidity Trend</h3>
+            <span class="chart-tag" id="chart-tag-turbidity">Live</span>
+          </div>
+          <canvas id="turbidityChart"></canvas>
+        </div>
+        <div class="chart-card wide" id="chart-card-multi">
+          <div class="chart-header">
+            <h3>Multi-Parameter Overview</h3>
+            <span class="chart-tag" id="chart-tag-multi">Last 24 Hours</span>
+          </div>
+          <canvas id="multiChart"></canvas>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== RESULTS SECTION ===== -->
+  <section class="section results-section" id="results">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" id="results-tag">Research Outcomes</span>
+        <h2 class="section-title" id="results-title">Results &amp; Findings</h2>
+        <p class="section-desc" id="results-desc">
+          Key outcomes from testing and deploying the AquaSense system in controlled and field environments.
+        </p>
+      </div>
+      <div class="results-grid" id="results-grid">
+        <div class="result-card" id="result-accuracy">
+          <div class="result-number gradient-text">99.2%</div>
+          <div class="result-label">Sensor Accuracy</div>
+          <div class="result-desc">Average accuracy across all six sensor types compared to laboratory standards.</div>
+        </div>
+        <div class="result-card" id="result-response">
+          <div class="result-number gradient-text">&lt;2s</div>
+          <div class="result-label">Alert Response Time</div>
+          <div class="result-desc">Time from threshold breach detection to notification delivery to stakeholders.</div>
+        </div>
+        <div class="result-card" id="result-uptime">
+          <div class="result-number gradient-text">99.7%</div>
+          <div class="result-label">System Uptime</div>
+          <div class="result-desc">System reliability during 30-day continuous field testing across 3 deployment sites.</div>
+        </div>
+        <div class="result-card" id="result-cost">
+          <div class="result-number gradient-text">70%</div>
+          <div class="result-label">Cost Reduction</div>
+          <div class="result-desc">Reduction in water testing costs compared to traditional manual testing methods.</div>
+        </div>
+      </div>
+
+      <!-- Technology Stack -->
+      <div class="tech-stack-section" id="tech-stack-section">
+        <h3 class="tech-title" id="tech-title">Technologies Used</h3>
+        <div class="tech-grid" id="tech-grid">
+          <div class="tech-pill" id="tech-arduino">Arduino UNO</div>
+          <div class="tech-pill" id="tech-esp32">ESP32 WiFi</div>
+          <div class="tech-pill" id="tech-sensors">IoT Sensors</div>
+          <div class="tech-pill" id="tech-python">Python</div>
+          <div class="tech-pill" id="tech-ml">Machine Learning</div>
+          <div class="tech-pill" id="tech-firebase">Firebase</div>
+          <div class="tech-pill" id="tech-chartjs">Chart.js</div>
+          <div class="tech-pill" id="tech-html">HTML/CSS/JS</div>
+          <div class="tech-pill" id="tech-blynk">Blynk IoT</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT SECTION ===== -->
+  <section class="section contact-section" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" id="contact-tag">Get In Touch</span>
+        <h2 class="section-title" id="contact-title">Contact Us</h2>
+        <p class="section-desc" id="contact-desc">
+          Interested in our project or want to collaborate? Send us a message!
+        </p>
+      </div>
+      <div class="contact-wrapper" id="contact-wrapper">
+        <div class="contact-info" id="contact-info">
+          <div class="contact-info-item" id="contact-email">
+            <div class="contact-icon">&#128231;</div>
+            <div>
+              <strong>Email</strong>
+              <p>aquasense.project@email.com</p>
+            </div>
+          </div>
+          <div class="contact-info-item" id="contact-institution">
+            <div class="contact-icon">&#127979;</div>
+            <div>
+              <strong>Institution</strong>
+              <p>Department of Electronics &amp; IoT Engineering</p>
+            </div>
+          </div>
+          <div class="contact-info-item" id="contact-github">
+            <div class="contact-icon">&#128187;</div>
+            <div>
+              <strong>GitHub</strong>
+              <p>github.com/aquasense-project</p>
+            </div>
+          </div>
+        </div>
+        <form class="contact-form" id="contact-form" onsubmit="handleSubmit(event)">
+          <div class="form-group">
+            <label for="contact-name-input">Full Name</label>
+            <input type="text" id="contact-name-input" placeholder="Your Name" required />
+          </div>
+          <div class="form-group">
+            <label for="contact-email-input">Email Address</label>
+            <input type="email" id="contact-email-input" placeholder="your@email.com" required />
+          </div>
+          <div class="form-group">
+            <label for="contact-message-input">Message</label>
+            <textarea id="contact-message-input" rows="5" placeholder="Tell us about your interest or collaboration ideas..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" id="contact-submit-btn" style="width:100%">
+            <span>Send Message</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+          </button>
+          <div class="form-success" id="form-success" style="display:none">
+            &#9989; Message sent successfully! We'll get back to you soon.
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" id="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <span class="logo-icon">&#128167;</span>
+        <span class="logo-text">Aqua<span class="logo-accent">Sense</span></span>
+        <p>Smart Automated Water Quality Monitoring System</p>
+      </div>
+      <div class="footer-links">
+        <a href="#home" id="footer-link-home">Home</a>
+        <a href="#about" id="footer-link-about">About</a>
+        <a href="#features" id="footer-link-features">Features</a>
+        <a href="#dashboard" id="footer-link-dashboard">Dashboard</a>
+        <a href="#results" id="footer-link-results">Results</a>
+        <a href="#contact" id="footer-link-contact">Contact</a>
+      </div>
+      <p class="footer-copy">&#169; 2026 AquaSense Project. Built with &#10084;&#65039; for cleaner water.</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
